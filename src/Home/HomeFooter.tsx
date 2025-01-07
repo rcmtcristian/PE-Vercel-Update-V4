@@ -40,7 +40,7 @@ export const HomeFooter = ({
         </div>
 
         <div className="mx-auto mt-8 text-sm text-right text-gray-600 max-w-7xl">
-          © 2024 ProgramEarth 501(c)(3)
+          © {new Date().getFullYear()} ProgramEarth 501(c)(3)
         </div>
       </div>
     </footer>

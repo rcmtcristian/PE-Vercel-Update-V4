@@ -9,9 +9,9 @@ const HeroSection = () => {
         </h1>
 
         <p className="mt-4 text-left text-color-palette-primary-black font-body-font-family text-body-font-size font-body-font-weight w-desktop-column-width-base-col-06">
-          We are a group of technologists mentoring the next generation of
-          early career developers to hack on climate solutions across
-          Sustainable Development Goals set by the United Nations.
+          We are a group of technologists mentoring the next generation of early
+          career developers to hack on climate solutions across Sustainable
+          Development Goals set by the United Nations.
         </p>
 
         <div className="flex flex-row items-start self-stretch justify-between px-8 mt-12 space-x-4">
@@ -33,7 +33,6 @@ const HeroSection = () => {
             description="The 12-week fellowship requires a weekly commitment of 3 to 5 hours. Mentors are available via scheduled Zoom hours and asynchronously through GitHub and Slack. Fellows earn credentialed badges upon completion."
             className="flex-1"
           />
-
         </div>
       </div>
     </div>
