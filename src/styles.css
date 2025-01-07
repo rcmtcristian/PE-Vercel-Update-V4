@@ -1,0 +1,19 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+@layer components {
+  .my-custom-class {
+    @apply bg-blue-500 text-white p-4;
+  }
+}
+
+@layer pages {
+  .bg-pe-gold-5 {
+    @apply bg-bg-pe-gold-5;
+    /* @apply bg-open-source-green */
+    /* @apply bg-legislative-blue */
+  }
+}
