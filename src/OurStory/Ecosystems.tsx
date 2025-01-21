@@ -6,9 +6,9 @@ const Ecosystems: React.FC = () => {
   return (
     <>
       <SectionHeader title="Our Change Thesis: Build Ecosystems" />
-      <div className="max-w-screen-xl px-[135px] py-16 flex flex-row gap-8 items-start self-stretch">
-        <div className="flex flex-col items-start justify-start gap-8 w-desktop-column-width-base-col-06">
-          <p className="text-color-palette-primary-black text-left font-body-font-family text-body-font-size font-body-font-weight w-[597px]">
+      <div className="px-4 md:px-[135px] py-8 md:py-16 flex flex-col md:flex-row gap-8 items-start self-stretch">
+        <div className="flex flex-col items-start justify-start gap-8 w-full md:w-desktop-column-width-base-col-06">
+          <p className="text-color-palette-primary-black text-left font-body-font-family text-body-font-size font-body-font-weight">
             ProgramEarth emerged as a response to accelerate carbon capture
             through reforestation. The United Nations highlights that restoring
             and returning 50% of natural areas to conservation is one of the
@@ -62,15 +62,14 @@ const Ecosystems: React.FC = () => {
                 sequestration and reducing our global carbon footprint.
               </p>
             </div>
-
-
           </div>
         </div>
 
-        <YellowBorder className="!w-desktop-column-width-base-col-04 !h-[521px]" />
+        <YellowBorder className="hidden md:block !w-desktop-column-width-base-col-04 !h-[521px]" />
       </div>
     </>
   );
 };
+
 
 export default Ecosystems;

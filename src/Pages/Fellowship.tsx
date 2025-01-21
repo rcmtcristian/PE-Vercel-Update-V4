@@ -24,7 +24,7 @@ export const Fellowship = ({
 
 
 
-      <div className="w-full max-w-[1440px] mx-auto pl-[134px]">
+      <div className="w-full max-w-[1440px] mx-auto px-4 md:pl-[134px]">
         <SectionHeader title="Our Mission" borderColor="bg-legislative-blue" />
         {/* Organization Overview */}
         <div className="w-full py-16 px-4 sm:px-8 lg:px-[135px]">
@@ -67,7 +67,7 @@ export const Fellowship = ({
 
           <img
             className="shrink-0 w-desktop-column-width-base-col-08 h-[276px] relative my-9"
-            style={{ objectFit: "cover" }}
+            style={{ objectFit: "contain" }}
             src="skills-graph1.png"
           />
           <div className="flex flex-col gap-4 mt-6 max-w-[800px]">
@@ -86,7 +86,7 @@ export const Fellowship = ({
                 Build your digital presence through Content Lab. Become job ready.{" "}
               </div>
               <div className="text-left text-color-palette-primary-black font-body-font-family text-body-font-size font-body-font-weight">
-                Fellows set themselves apart with a digital brand curated by their mentors, who provide relevant and current dialogue about what it means to showcase a comprehensive overview of a fellow’s experience, skills, and achievements. We focus on building a portfolio through social media training, resume review, and mock interviews. Ultimately you'll write a blog or speak at a conference to get your story out there on every developer and career platform.
+                Fellows set themselves apart with a digital brand curated by their mentors, who provide relevant and current dialogue about what it means to showcase a comprehensive overview of a fellow's experience, skills, and achievements. We focus on building a portfolio through social media training, resume review, and mock interviews. Ultimately you'll write a blog or speak at a conference to get your story out there on every developer and career platform.
               </div>
             </div>
           </div>

@@ -25,7 +25,7 @@ export const Donate = ({
         ${className}
       `}
     >
-      <div className="w-full max-w-[1440px] mx-auto pl-[134px]">
+      <div className="w-full max-w-[1440px] mx-auto px-4 md:pl-[134px]">
         <SectionHeader
           title={"Donate to Us"}
           className={cn(

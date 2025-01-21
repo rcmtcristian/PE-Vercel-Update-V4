@@ -21,7 +21,7 @@ export const Volunteer = ({
     <div
       className={`bg-color-palette-primary-white flex flex-col gap-0 items-center justify-start relative overflow-hidden ${className}`}
     >
-      {/* <div className="w-full max-w-[1440px] mx-auto pl-[134px]"> */}
+      {/* <div className="w-full max-w-[1440px] mx-auto px-4 md:pl-[134px]"> */}
       {/* Hero Section: Mission and Vision */}
       <GenerationsHeroSection />
       <SectionHeader

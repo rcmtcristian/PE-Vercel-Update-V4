@@ -28,7 +28,7 @@ export const Conservation = ({
         // "h-[1px] sm:h-[1.5px] md:h-[2px] lg:h-[2.5px] xl:h-[3px]",
 
       )} />
-      <div className="w-full max-w-[1440px] mx-auto pl-[164px]">
+      <div className="w-full max-w-[1440px] mx-auto px-4 md:pl-[164px]">
         <div className="flex flex-col items-start self-stretch justify-start gap-6 px-4 md:px-8 lg:px-16 xl:px-24">
           <div className="flex flex-col items-start justify-start w-full gap-6 mx-auto max-w-7xl">
             <div className="w-full text-xl text-left text-color-palette-primary-black font-subtitle-font-family md:text-2xl lg:text-3xl font-subtitle-font-weight">

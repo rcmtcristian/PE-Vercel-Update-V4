@@ -38,10 +38,10 @@ export const ErgVolunteering = ({
         // "h-[1px] sm:h-[1.5px] md:h-[2px] lg:h-[2.5px] xl:h-[3px]",
 
       )} />
-      <div className="w-full max-w-[1440px] mx-auto pl-[134px]">
+      <div className="w-full max-w-[1440px] mx-auto px-4 md:px-[134px]">
         {/* Hero Section: Mission and Vision */}
-        <div className="max-w-screen-xl px-[135px] py-16 flex flex-col gap-8 items-start self-stretch">
-          <p className="text-[#000000] text-left font-body-font-family text-body-font-size font-body-font-weight w-desktop-column-width-base-col-07">
+        <div className="py-8 md:py-16 flex flex-col gap-8 items-start self-stretch">
+          <p className="text-[#000000] text-left font-body-font-family text-body-font-size font-body-font-weight">
             Support open source software by sponsoring one of our events as a
             co-partner. Whether you are interested in a speaking opportunity or
             hosting an activity, we will work with your team to plan logistics and
