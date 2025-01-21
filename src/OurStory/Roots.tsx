@@ -4,17 +4,17 @@ const HeroSection = () => {
   return (
     <div className="relative flex flex-row items-center justify-center py-8 md:py-16 bg-pe-gold-5">
       <div className="relative flex flex-col items-center justify-start w-full px-4 md:px-0 md:w-desktop-column-width-base-col-08">
-        <h1 className="text-center text-color-palette-primary-black font-title-font-family text-title-font-size font-title-font-weight w-full md:w-desktop-column-width-base-col-06">
+        <h1 className="w-full text-center text-color-palette-primary-black font-title-font-family text-title-font-size font-title-font-weight md:w-desktop-column-width-base-col-06">
           Sustain Clouds from the Root
         </h1>
 
-        <p className="mt-4 text-left text-color-palette-primary-black font-body-font-family text-body-font-size font-body-font-weight w-full md:w-desktop-column-width-base-col-06">
+        <p className="w-full mt-4 text-left pl-36 text-color-palette-primary-black font-body-font-family text-body-font-size font-body-font-weight md:w-desktop-column-width-base-col-06">
           We are a group of technologists mentoring the next generation of early
           career developers to hack on climate solutions across Sustainable
           Development Goals set by the United Nations.
         </p>
 
-        <div className="flex flex-col md:flex-row items-start self-stretch justify-between mt-8 md:mt-12 space-y-6 md:space-y-0 md:space-x-4 px-4 md:px-8">
+        <div className="flex flex-col items-start self-stretch justify-between px-4 mt-8 space-y-6 md:flex-row md:mt-12 md:space-y-0 md:space-x-4 md:px-8">
           <CardInfoGraphicTypeIcon
             header="Company Volunteering"
             subheader="August 1st-30th"
@@ -38,6 +38,5 @@ const HeroSection = () => {
     </div>
   );
 };
-
 
 export default HeroSection;
