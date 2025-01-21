@@ -37,7 +37,7 @@ export const GreenBorder = ({
   return (
     <div
       className={
-        "rounded-[37px] border-solid border-" +
+        "rounded-[47px] border-solid border-" +
         primaryColor +
         " border-[6px] shrink-0 w-[300px] h-[300px] relative overflow-hidden " +
         className +
@@ -49,11 +49,17 @@ export const GreenBorder = ({
         className={
           "rounded-[29px] border-solid border-" +
           secondaryColor +
-          " border-[12px] w-[100%] h-[100%] absolute right-[0%] left-[0%] bottom-[0%] top-[0%]"
+          " border-[12px] w-[100%] h-[100%] absolute right-[0%] left-[0%] bottom-[0%] top-[0%] "
         }
-        style={{ objectFit: "fill" }}
-        src={imageSrc} // dynamic image source with fallback
-        alt={alt} // dynamic alt text
+        style={{
+          objectFit: "cover",
+          objectPosition: "center",
+          width: "100%",
+          height: "100%",
+          position: "absolute",
+        }}
+        src={imageSrc}
+        alt={alt}
       />
     </div>
   );

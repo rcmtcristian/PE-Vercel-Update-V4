@@ -6,7 +6,7 @@ const AnimatedText: React.FC<{ startFrame: string; className?: string }> = ({
   className,
 }) => {
   const [activeVariant, setActiveVariant] = useState(0);
-  const baseText = "We’re building a community of technologists who care about";
+  const baseText = "We're building a community of technologists who care about";
   const variants = [
     "collective action",
     "diverse communities",
@@ -14,24 +14,21 @@ const AnimatedText: React.FC<{ startFrame: string; className?: string }> = ({
     "sustainable solutions",
   ];
 
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      setActiveVariant((prev) => (prev + 1) % variants.length);
-    }, 3000);
-
-    return () => clearInterval(intervalId);
-  }, []);
-
   return (
     <div
-      className={`text-color-palette-primary-white text-center text-lg md:text-xl ${className}`}
+      className={`text-color-palette-primary-white text-center text-lg md:text-xl md:text-4xl [text-wrap:balance] bg-clip-text  ${className}`}
     >
       {baseText}{" "}
       <span
-        key={activeVariant} // Triggers re-mounting for animation
-        className="inline-block animate-slide-up text-pe-gold-2"
+        key={activeVariant}
+        className="text-pe-gold-2 inline-flex flex-col h-[calc(theme(fontSize.xl)*theme(lineHeight.tight))] md:h-[calc(theme(fontSize.2xl)*theme(lineHeight.tight))] overflow-hidden"
       >
-        {variants[activeVariant]}
+        <ul className="block animate-text-slide-4 text-left leading-tight [&_li]:block">
+          {variants.map((variant) => (
+            <li key={variant}>{variant}</li>
+          ))}
+          <li aria-hidden="true">{variants[0]}</li>
+        </ul>
       </span>
     </div>
   );

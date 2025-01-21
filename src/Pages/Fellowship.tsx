@@ -7,7 +7,6 @@ import Testimonials from "@/Fellowship/Testimonials";
 import HomeFooter from "@/Home/HomeFooter";
 import OurStoryStats from "@/OurStory/OurStoryStats";
 
-import Teams from "@/OurStory/Teams";
 
 
 export interface FellowshipProps {
@@ -96,7 +95,7 @@ export const Fellowship = ({
       <SectionHeader title="Application Information" borderColor="bg-legislative-blue" />
       <ApplicationInformationSection />
       <Problems />
-      <HomeFooter className="!w-desktop-breakpoint-base" />
+      <HomeFooter />
     </div>
   );
 };

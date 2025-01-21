@@ -23,7 +23,7 @@ const HomeImpactSection = () => {
               description="Develop your skills as an industry leader by guiding our early career fellows with their journey into the tech industry. From resume reviews and mock interviews to paired programming and technical workshops, our mentorship program has events where mentors can demonstrate their experience and coach fellows with improving their skills. Our volunteers span across the industry including AWS, Google, Microsoft, and more."
               graphicType="big-image"
               className="flex-grow"
-              imageSrc="../../../public/claymation-mentorship-square.webp"
+              imageSrc="/claymation-mentorship-square.webp"
             />
             <div className="flex justify-center mt-4">
               <MainButton label="Sign Up Today" className="w-full max-w-xs" />
@@ -38,7 +38,7 @@ const HomeImpactSection = () => {
               description="Build the bridge between your technical education and industry development practices. Join our free 10 week fellowship program to work on data-driven software projects and gain experience in DevSecOps and full-stack web development. Everyone is welcome to apply with priority given to underrepresented groups. Our fellows graduate as competitive candidates who are hired by companies such as Adobe, IBM, Microsoft, and more."
               graphicType="big-image"
               className="flex-grow"
-              imageSrc="../../../public/claymation-fellowship-square.webp"
+              imageSrc="/claymation-fellowship-square.webp"
             />
             <div className="flex justify-center mt-4">
               <MainButton
@@ -56,7 +56,7 @@ const HomeImpactSection = () => {
               description="Our mentors and fellows work on open source software that support nature conservation, biodiversity, and sustainability projects. From restoring natural resources to lowering the carbon footprint, we partner with nature-based organizations to create direct impact for their communities via technology."
               graphicType="big-image"
               className="flex-grow"
-              imageSrc="../../../public/claymation-nature-square copy.webp"
+              imageSrc="/claymation-nature-square copy.webp"
             />
             <div className="flex justify-center mt-4">
               <MainButton label="Learn More" className="w-full max-w-xs" />
