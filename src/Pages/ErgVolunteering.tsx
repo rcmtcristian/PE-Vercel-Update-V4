@@ -32,24 +32,15 @@ export const ErgVolunteering = ({
         ${className}
       `}
     >
-
-      <SectionHeader title={"ERG Volunteering"} className={cn(
-        " left-[-21.9vw] right-[-100vw]",
-        // "h-[1px] sm:h-[1.5px] md:h-[2px] lg:h-[2.5px] xl:h-[3px]",
-
-      )} />
-      <div className="w-full max-w-[1440px] mx-auto px-4 md:px-[134px]">
+      <SectionHeader
+        title={"ERG Volunteering"}
+        className={cn(
+          "left-[-21.9vw] right-[-100vw]"
+          // "h-[1px] sm:h-[1.5px] md:h-[2px] lg:h-[2.5px] xl:h-[3px]",
+        )}
+      />
+      <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
         {/* Hero Section: Mission and Vision */}
-        <div className="py-8 md:py-16 flex flex-col gap-8 items-start self-stretch">
-          <p className="text-[#000000] text-left font-body-font-family text-body-font-size font-body-font-weight">
-            Support open source software by sponsoring one of our events as a
-            co-partner. Whether you are interested in a speaking opportunity or
-            hosting an activity, we will work with your team to plan logistics and
-            send out follow-up surveys.
-          </p>
-
-          <MainButton />
-        </div>
         <HowTo />
 
         {/* Organization Overview */}
@@ -67,15 +58,14 @@ export const ErgVolunteering = ({
 
         {/* Team Section */}
         <ErgVolunteeringStats />
-
       </div>
       <CallToActionBanner
         title={"Volunteer with us Today!"}
         buttonLabel={"Sign Up"}
         backgroundColor="bg-legislative-blue"
-      // onButtonClick={() => {
-      //   window.location.href = "/volunteer";
-      // }}
+        // onButtonClick={() => {
+        //   window.location.href = "/volunteer";
+        // }}
       />
       <HomeFooter />
     </div>

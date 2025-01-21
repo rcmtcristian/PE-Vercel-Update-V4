@@ -26,7 +26,6 @@ export const NavBarModeDesktop = ({
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
-    // Prevent scrolling when menu is open
     document.body.style.overflow = !isMenuOpen ? "hidden" : "unset";
   };
 
@@ -35,7 +34,7 @@ export const NavBarModeDesktop = ({
       <div
         className={cn(
           "bg-header-and-footer-nav-bar-background-fill",
-          "px-4 md:px-8",
+          "px-4 sm:px-6 lg:px-8",
           "flex flex-row items-center justify-between",
           "min-h-[72px] w-full",
           "relative",
@@ -46,13 +45,13 @@ export const NavBarModeDesktop = ({
         <ProgramEquityLogo size="medium" link="/" className="flex-shrink-0" />
 
         {/* Desktop Navigation */}
-        <div className="hidden md:block">
+        <div className="hidden lg:block">
           <NavigationMenu>
             <NavigationMenuList>
               <NavigationMenuItem>
                 <NavigationMenuTrigger>Get Involved</NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <ul className="grid gap-3 p-4 w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
+                  <ul className="grid gap-3 p-4 w-[300px] md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
                     <li className="row-span-3">
                       <NavigationMenuLink asChild>
                         <a
@@ -109,7 +108,7 @@ export const NavBarModeDesktop = ({
         {/* Mobile Burger Menu Button */}
         <button
           onClick={toggleMenu}
-          className="p-2 md:hidden"
+          className="p-2 lg:hidden"
           aria-label="Toggle menu"
         >
           {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -118,7 +117,7 @@ export const NavBarModeDesktop = ({
 
       {/* Mobile Menu Overlay */}
       {isMenuOpen && (
-        <div className="fixed inset-0 z-40 bg-white md:hidden">
+        <div className="fixed inset-0 z-40 bg-white lg:hidden">
           <div className="flex flex-col p-4 pt-20 space-y-4">
             <div className="space-y-4">
               <h3 className="mb-2 text-lg font-medium">Get Involved</h3>

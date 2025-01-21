@@ -23,18 +23,20 @@ export const Conservation = ({
     >
 
 
-      <SectionHeader title={"Sustainability Projects"} className={cn(
-        " left-[-19.1vw] right-[-100vw]",
-        // "h-[1px] sm:h-[1.5px] md:h-[2px] lg:h-[2.5px] xl:h-[3px]",
-
-      )} />
-      <div className="w-full max-w-[1440px] mx-auto px-4 md:pl-[164px]">
-        <div className="flex flex-col items-start self-stretch justify-start gap-6 px-4 md:px-8 lg:px-16 xl:px-24">
-          <div className="flex flex-col items-start justify-start w-full gap-6 mx-auto max-w-7xl">
-            <div className="w-full text-xl text-left text-color-palette-primary-black font-subtitle-font-family md:text-2xl lg:text-3xl font-subtitle-font-weight">
+      <SectionHeader
+        title={"Sustainability Projects"}
+        className={cn(
+          "left-[-19.1vw] right-[-100vw]",
+          // "h-[1px] sm:h-[1.5px] md:h-[2px] lg:h-[2.5px] xl:h-[3px]",
+        )}
+      />
+      <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
+        <div className="flex flex-col items-start self-stretch justify-start gap-4 sm:gap-5 md:gap-6 px-2 sm:px-4 md:px-6 lg:px-8 xl:px-12">
+          <div className="flex flex-col items-start justify-start w-full gap-4 sm:gap-5 md:gap-6 mx-auto max-w-7xl">
+            <div className="w-full text-lg sm:text-xl md:text-2xl lg:text-3xl text-left text-color-palette-primary-black font-subtitle-font-family font-subtitle-font-weight">
               How do we create an impact?
             </div>
-            <div className="w-full text-base text-left text-color-palette-primary-black font-body-font-family md:text-lg lg:text-xl font-body-font-weight relative flex flex-col items-start justify-start gap-6 max-w-[800px]">
+            <div className="w-full text-sm sm:text-base md:text-lg lg:text-xl text-left text-color-palette-primary-black font-body-font-family font-body-font-weight relative flex flex-col items-start justify-start gap-4 sm:gap-5 md:gap-6 max-w-[800px]">
               Our mentors and fellows work on open source environmental projects
               that are restoring endangered species and natural resources like
               land, water, and forests. With our partners, we help organizations
@@ -43,13 +45,13 @@ export const Conservation = ({
 
             <ConservationStats />
 
-            <div className="w-full text-2xl text-left text-color-palette-primary-black font-header-font-family md:text-3xl lg:text-4xl font-header-font-weight ">
+            <div className="w-full text-xl sm:text-2xl md:text-3xl lg:text-4xl text-left text-color-palette-primary-black font-header-font-family font-header-font-weight">
               Our goal: Return 304 Million hectares of land to conservation
               efforts
             </div>
           </div>
 
-          <div className="grid w-full grid-cols-1 gap-6 mx-auto max-w-7xl sm:grid-cols-2 lg:grid-cols-3 py-7">
+          <div className="grid w-full grid-cols-1 gap-4 sm:gap-5 md:gap-6 mx-auto max-w-7xl sm:grid-cols-2 lg:grid-cols-3 py-5 sm:py-6 md:py-7">
             <YellowBorder
               header="Indigenous Led"
               description="86% of the world's biodiversity is protected by Indigenous communities. We are guided by their knowledge and vision for whole ecosystems impact such as rematriation and permaculture."

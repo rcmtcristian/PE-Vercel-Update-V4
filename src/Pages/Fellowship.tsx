@@ -21,18 +21,15 @@ export const Fellowship = ({
     <div
       className={`bg-color-palette-primary-white flex flex-col gap-0 items-center justify-start relative overflow-hidden ${className}`}
     >
-
-
-
-      <div className="w-full max-w-[1440px] mx-auto px-4 md:pl-[134px]">
+      <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
         <SectionHeader title="Our Mission" borderColor="bg-legislative-blue" />
         {/* Organization Overview */}
-        <div className="w-full py-16 px-4 sm:px-8 lg:px-[135px]">
-          <div className="relative flex flex-col items-start justify-start gap-6 max-w-[800px]">
-            <div className="relative flex items-center justify-start text-left text-color-palette-primary-black font-subtitle-font-family text-subtitle-font-size font-subtitle-font-weight">
+        <div className="w-full py-8 sm:py-12 md:py-16 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
+          <div className="relative flex flex-col items-start justify-start gap-4 sm:gap-5 md:gap-6 max-w-[800px]">
+            <div className="relative flex items-center justify-start text-left text-color-palette-primary-black font-subtitle-font-family text-xl sm:text-2xl md:text-3xl font-subtitle-font-weight">
               Welcome to the village! Unlock coding in 12 weeks.{" "}
             </div>
-            <div className="relative flex items-center justify-start text-left text-color-palette-primary-black font-body-font-family text-body-font-size font-body-font-weight py-9">
+            <div className="relative flex items-center justify-start text-left text-color-palette-primary-black font-body-font-family text-sm sm:text-base md:text-lg font-body-font-weight py-4 sm:py-6 md:py-9">
               Our mission is to be the bridge between your bootcamp syllabus and
               your first role within a team for software engineers from
               non-traditional backgrounds. Within 12 weeks, we teach you how to
@@ -42,19 +39,19 @@ export const Fellowship = ({
               <br />
               Development fellows can choose between 2 specialty paths: <br />
             </div>
-            <ul className="py-5">
+            <ul className="py-3 sm:py-4 md:py-5">
               <li>Development security operations (DevSecOps) architecture </li>
               <li>Full-stack web development</li>
             </ul>
           </div>
-          <MainButton />
+          <MainButton label={"Join"} />
           <Testimonials />
-          <div className="flex flex-col gap-4 mt-6 max-w-[800px]">
-            <div className="flex flex-col gap-2">
-              <div className="relative flex items-center justify-start text-left text-color-palette-primary-black font-subheader-font-family text-subheader-font-size font-subheader-font-weight">
+          <div className="flex flex-col gap-3 sm:gap-4 mt-4 sm:mt-5 md:mt-6 max-w-[800px]">
+            <div className="flex flex-col gap-2 sm:gap-3">
+              <div className="relative flex items-center justify-start text-left text-color-palette-primary-black font-subheader-font-family text-lg sm:text-xl md:text-2xl font-subheader-font-weight">
                 Technical Workshops Led by Industry Experts{" "}
               </div>
-              <div className="text-left text-color-palette-primary-black font-body-font-family text-body-font-size font-body-font-weight">
+              <div className="text-left text-color-palette-primary-black font-body-font-family text-sm sm:text-base md:text-lg font-body-font-weight">
                 The nature of software is ever changing and the network you gain
                 your knowledge from is what helps you stand out. Through our
                 workshop events, fellows can attend live demos that feature
@@ -66,7 +63,7 @@ export const Fellowship = ({
           </div>
 
           <img
-            className="shrink-0 w-desktop-column-width-base-col-08 h-[276px] relative my-9"
+            className="shrink-0 w-full sm:w-3/4 md:w-2/3 lg:w-desktop-column-width-base-col-08 h-auto sm:h-[200px] md:h-[240px] lg:h-[276px] relative my-6 sm:my-8 md:my-9"
             style={{ objectFit: "contain" }}
             src="skills-graph1.png"
           />
