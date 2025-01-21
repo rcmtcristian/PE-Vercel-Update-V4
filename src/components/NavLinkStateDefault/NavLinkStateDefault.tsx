@@ -14,24 +14,43 @@ export const NavLinkStateDefault = ({
   className,
   ...props
 }: INavLinkStateDefaultProps): JSX.Element => {
-  const variantsClassName = "state-" + state;
-
   return (
     <div
-      className={
-        "flex flex-row gap-spacing-base-8-05 z-20 items-center justify-start shrink-0 h-6 relative " +
-        className +
-        " " +
-        variantsClassName
-      }
+      className={`
+        flex 
+        flex-row 
+        items-center 
+        justify-start 
+        relative 
+        z-20
+        min-h-[1.5rem]
+        py-1
+        px-2
+        md:px-0
+        md:py-0
+        space-x-1.5
+        md:space-x-2
+        ${state && `state-${state}`}
+        ${className}
+      `}
     >
-      <div className="relative z-50 flex items-end justify-center text-center text-header-and-footer-nav-bar-menu-links-default font-link-nav-default-font-family text-link-nav-default-font-size leading-link-nav-default-line-height font-link-nav-default-font-weight">
-        {linkText}{" "}
-      </div>
+      <span className={`
+        relative 
+        z-50 
+        flex 
+        items-center
+        text-header-and-footer-nav-bar-menu-links-default 
+        font-link-nav-default-font-family 
+        text-link-nav-default-font-size 
+        leading-link-nav-default-line-height 
+        font-link-nav-default-font-weight
+        whitespace-nowrap
+      `}>
+        {linkText}
+      </span>
+
       {showDropdownCaret && (
-        <>
-          <ArrowDropDown className="!shrink-0 !w-3 !h-3"></ArrowDropDown>
-        </>
+        <ArrowDropDown className="!shrink-0 !w-2.5 !h-2.5 md:!w-3 md:!h-3" />
       )}
     </div>
   );
