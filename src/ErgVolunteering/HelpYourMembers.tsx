@@ -1,5 +1,4 @@
 
-import { YellowBorder } from "@/components/YellowBorder";
 import { SectionHeader } from "@/components/SectionHeader";
 
 const HelpYourMembers: React.FC = () => {
@@ -22,9 +21,9 @@ const HelpYourMembers: React.FC = () => {
           </p>
 
           <ul>
-            <li>- Mobilize your volunteering events to save you time</li>
-            <li>- Members practice leadership with skill-based events</li>
-            <li>- Generate reports on sustainability impact</li>
+            <li>• Mobilize your volunteering events to save you time</li>
+            <li>• Members practice leadership with skill based events</li>
+            <li>• Generate reports on sustainability impact</li>
           </ul>
 
         </div>

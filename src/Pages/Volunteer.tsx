@@ -4,6 +4,7 @@ import Events from "@/components/Events";
 import { MainButton } from "@/components/MainButton";
 import { SectionHeader } from "@/components/SectionHeader";
 import HomeFooter from "@/Home/HomeFooter";
+import { cn } from "@/lib/utils";
 import GenerationsHeroSection from "@/Volunteer/NextGeneration";
 import Testimonials from "@/Volunteer/Testimonials";
 import VolunteerStats from "@/Volunteer/VolunteerStats";
@@ -20,14 +21,20 @@ export const Volunteer = ({
     <div
       className={`bg-color-palette-primary-white flex flex-col gap-0 items-center justify-start relative overflow-hidden ${className}`}
     >
-
+      {/* <div className="w-full max-w-[1440px] mx-auto pl-[134px]"> */}
       {/* Hero Section: Mission and Vision */}
       <GenerationsHeroSection />
-      <SectionHeader title="Upcoming Events" />
+      <SectionHeader
+        title={"Upcoming Events"}
+        className={cn(
+          " left-[-21.9vw] right-[-100vw]"
+          // "h-[1px] sm:h-[1.5px] md:h-[2px] lg:h-[2.5px] xl:h-[3px]",
+        )}
+      />
 
       <div className="w-full py-16">
         <div className="relative flex flex-col items-start justify-start gap-6 mx-auto w-full sm:w-[90%] md:w-[80%]">
-          <div className="text-color-palette-primary-black text-left font-subtitle-font-family text-subtitle-font-size font-subtitle-font-weight">
+          <div className="pl-40 text-left text-color-palette-primary-black font-subtitle-font-family text-subtitle-font-size font-subtitle-font-weight">
             Pair Hours{" "}
           </div>
           <EventCard
@@ -41,7 +48,6 @@ export const Volunteer = ({
             eventName="Building API integrations"
             className="!self-stretch !shrink-0"
           />
-
 
           <div className="w-full py-16 px-4 sm:px-8 lg:px-[135px]">
             <div className="relative flex flex-col items-start justify-start gap-6 w-full sm:w-[90%] lg:w-[80%]">
@@ -61,15 +67,15 @@ export const Volunteer = ({
                 <div className="relative flex items-center justify-start text-left text-color-palette-primary-black font-subheader-font-family text-subheader-font-size font-subheader-font-weight">
                   Do you want to foster tech for good and build a community?
                 </div>
-                <div className="text-color-palette-primary-black text-left font-body-font-family text-body-font-size font-body-font-weight">
+                <div className="text-left text-color-palette-primary-black font-body-font-family text-body-font-size font-body-font-weight">
                   We see many trailblazers, including first-generation students,
-                  single parents, and career changers. Fellows often cite workshops
-                  as their first exposure to industry practices, with hands-on pair
-                  hours providing valuable interview experience.
+                  single parents, and career changers. Fellows often cite
+                  workshops as their first exposure to industry practices, with
+                  hands-on pair hours providing valuable interview experience.
                 </div>
               </div>
 
-              <div className="flex flex-wrap gap-4 mt-4 justify-start">
+              <div className="flex flex-wrap justify-start gap-4 mt-4">
                 <div className="flex w-full sm:w-[200px] h-[200px] relative">
                   <img
                     className="self-stretch flex-1 object-cover"
@@ -99,20 +105,24 @@ export const Volunteer = ({
               </div>
             </div>
 
-
             <Events />
 
             <Testimonials />
             <VolunteerStats />
-            <SectionHeader title="Contact Us" />
+
+            <SectionHeader
+              title={"Contact Us"}
+              className={cn(" left-[-9.0vw] right-[-100vw]")}
+            />
             <div className="w-full mt-16">
-              <div className="relative flex items-center self-stretch justify-start text-left text-color-palette-primary-black font-subtitle-font-family text-subtitle-font-size font-subtitle-font-weight">
-                Need more information?{" "}
-              </div>
+              <span className="relative flex items-center self-stretch justify-start text-left text-color-palette-primary-black font-subtitle-font-family text-subtitle-font-size font-subtitle-font-weight">
+                Need more information?
+              </span>
+              <address>
+                Contact us at <a href="mailto:team@programearth.org">team@programearth.org</a> with any additional questions
+              </address>
             </div>
           </div>
-
-
         </div>
         <CallToActionBanner
           title="Volunteer with us today!"
@@ -120,11 +130,12 @@ export const Volunteer = ({
           backgroundColor="bg-open-source-green"
           onButtonClick={() => {
             // Handle button click
-            console.log('Button clicked');
+            console.log("Button clicked");
           }}
         />
         <HomeFooter />
       </div>
-    </div >
+    </div>
+    // </div >
   );
 };

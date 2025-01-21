@@ -16,7 +16,7 @@ export const Statement = ({
 }: IStatementProps): JSX.Element => {
   return (
     <div
-      className={`flex flex-col gap-2 items-start justify-start w-full max-w-[269px] px-6 sm:px-9 md:px-10 ${className}`}
+      className={`flex flex-col gap-2 items-start justify-start w-full max-w-[269px] ${className}`}
     >
       <div
         className={`text-color-palette-primary-black text-left font-subtitle-font-family text-xl sm:text-2xl md:text-3xl font-subtitle-font-weight w-full ${numberClassName}`}

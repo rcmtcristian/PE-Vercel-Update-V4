@@ -2,8 +2,8 @@ import { MetricsNumber } from "../components/Stats"; // Adjust import path as ne
 
 const OurStoryStats = () => {
   return (
-    <div className="w-full px-4 py-12 ">
-      <div className="w-full max-w-full px-4 md:px-8 lg:px-16">
+    <div className="w-full py-12">
+      <div className="w-full max-w-full">
         <h2 className="mb-8 text-xl text-color-palette-primary-black font-title-font-family md:text-2xl lg:text-3xl font-title-font-weight">
           How do we create an impact?
         </h2>

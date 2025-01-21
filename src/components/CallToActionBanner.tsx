@@ -2,7 +2,7 @@ import React from 'react';
 import { MainButton } from './MainButton'; // Adjust the import path as needed
 
 interface CallToActionBannerProps {
-  title: string;
+  title?: React.ReactNode | string; // Can be text, JSX, or a component
   buttonLabel: string;
   buttonClassName?: string;
   onButtonClick?: () => void;
@@ -11,7 +11,7 @@ interface CallToActionBannerProps {
 }
 
 export const CallToActionBanner: React.FC<CallToActionBannerProps> = ({
-  title,
+  title = 'Get Started Today',
   buttonLabel,
   buttonClassName = '!w-desktop-column-width-base-col-03',
   onButtonClick,
