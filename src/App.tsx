@@ -42,7 +42,7 @@ export default function App() {
 
         {/* Routes */}
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home />} />Z
           {/* Dynamic route */}
           <Route path="/:page" element={<DynamicPage />} />
         </Routes>
