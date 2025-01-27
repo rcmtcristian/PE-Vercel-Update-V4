@@ -2,7 +2,7 @@
 import { BorderBlue } from "./BorderBlue";
 import { MainButton } from "./MainButton";
 import { SecondaryButton } from "./SecondaryButton";
-export interface IProfilePicSizeBaseCol2Props {
+export interface ProfileBoxProps {
   header?: string;
   subheader?: string;
   subheaderUrl?: string;
@@ -15,7 +15,7 @@ export interface IProfilePicSizeBaseCol2Props {
   imageSrc?: string;
 }
 
-export const ProfilePicSizeBaseCol2 = ({
+export const ProfileBox = ({
   header = "Name",
   subheader = "Organization",
   subheaderUrl = "",
@@ -27,28 +27,34 @@ export const ProfilePicSizeBaseCol2 = ({
   className,
   imageSrc = "/image0.png",
   ...props
-}: IProfilePicSizeBaseCol2Props): JSX.Element => {
+}: ProfileBoxProps): JSX.Element => {
   const variantsClassName = "pic-size-" + picSize;
 
   return (
     <div
-      className={
-        "flex flex-col gap-spacing-base-8-05 items-center justify-start shrink-0 w-desktop-column-width-base-col-03 relative overflow-hidden " +
-        className +
-        " " +
-        variantsClassName
-      }
+      className={`
+        flex flex-col 
+        gap-4 md:gap-spacing-base-8-05 
+        items-start justify-start 
+        w-full md:w-desktop-column-width-base-col-03
+        min-w-[280px] max-w-full
+        p-4 md:p-0
+        relative
+        ${className} 
+        ${variantsClassName}
+      `}
     >
-      <BorderBlue
-        borderSize="12-px"
-        className="!w-desktop-column-width-base-col-02 !h-desktop-column-width-base-col-02"
-        src={imageSrc}
-      ></BorderBlue>
-      <div className="relative flex flex-col items-start self-stretch justify-start gap-0 pr-spacing-base-8-05 pl-spacing-base-8-05 shrink-0">
-        <div className="text-[#000000] text-center font-header-font-family text-header-font-size font-header-font-weight relative self-stretch flex items-center justify-center">
+      <div className="flex items-start justify-center w-full">
+        <BorderBlue
+          className="w-full md:!w-desktop-column-width-base-col-02 aspect-square md:!h-desktop-column-width-base-col-02"
+          src={imageSrc}
+        />
+      </div>
+      <div className="flex flex-col items-center justify-start w-full gap-2 px-2 md:gap-0 md:px-spacing-base-8-05">
+        <h2 className="w-full min-h-[2em] text-[#000000] text-center font-header-font-family text-header-font-size font-header-font-weight overflow-hidden text-ellipsis">
           {header}
-        </div>
-        <div className="text-[#000000] text-center font-subheader-font-family text-subheader-font-size font-subheader-font-weight relative self-stretch flex items-center justify-center">
+        </h2>
+        <div className="w-full min-h-[2em] text-[#000000] text-center font-subheader-font-family text-subheader-font-size font-subheader-font-weight overflow-hidden text-ellipsis">
           {subheaderUrl ? (
             <a
               href={subheaderUrl}
@@ -62,13 +68,9 @@ export const ProfilePicSizeBaseCol2 = ({
             subheader
           )}
         </div>
-        <div className="relative flex flex-row items-start self-stretch justify-center gap-6 shrink-0">
+        <div className="flex flex-row flex-wrap items-center justify-center w-full gap-4 mt-2 md:gap-6">
           {showLink1 && websiteUrl && (
-            <a
-              href={websiteUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href={websiteUrl} target="_blank" rel="noopener noreferrer">
               <SecondaryButton
                 label="Website"
                 type="text"
@@ -77,11 +79,7 @@ export const ProfilePicSizeBaseCol2 = ({
             </a>
           )}
           {showLink2 && linkedinUrl && (
-            <a
-              href={linkedinUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href={linkedinUrl} target="_blank" rel="noopener noreferrer">
               <SecondaryButton
                 label="LinkedIn"
                 type="text"

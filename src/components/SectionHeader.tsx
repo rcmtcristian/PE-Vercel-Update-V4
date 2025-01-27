@@ -20,11 +20,11 @@ export const SectionHeader = ({
       className={cn(
         // Base styles
         "flex flex-col gap-4 items-start justify-start relative",
-        "px-4 py-4 sm:px-6 sm:py-5 md:px-8 md:py-6 md:pl-[134px] lg:px-10 lg:py-7 xl:px-12 xl:py-8 wxl:px-14 wxl:py-9",
+        "px-4 py-4 sm:px-6 sm:py-5 md:px-8 md:py-6 md:pl-[134px] lg:px-10 lg:py-7 xl:px-12 xl:py-8 wxl:px-14 wxl:py-9 ",
         className
       )}
     >
-      <div className="relative flex flex-col items-start self-stretch justify-start gap-4">
+      <div className="relative flex flex-col items-start self-stretch justify-start gap-4 ">
         <div
           className={cn(
             // Base styles

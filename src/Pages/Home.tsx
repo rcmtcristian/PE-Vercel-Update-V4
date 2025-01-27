@@ -27,7 +27,7 @@ export const Home = ({ className, ...props }: HomeProps): JSX.Element => {
 
       <HomeCtaSection></HomeCtaSection>
 
-      <HomeFooter className="!w-desktop-breakpoint-base"></HomeFooter>
+      <HomeFooter />
     </div>
   );
 };

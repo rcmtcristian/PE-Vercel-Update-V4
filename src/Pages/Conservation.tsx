@@ -24,7 +24,7 @@ export const Conservation = ({
       <SectionHeader
         title={"Sustainability Projects"}
         className={cn(
-          "left-[-19.1vw] right-[-100vw]"
+          "left-[-29vw] right-[-100vw]"
           // "h-[1px] sm:h-[1.5px] md:h-[2px] lg:h-[2.5px] xl:h-[3px]",
         )}
       />

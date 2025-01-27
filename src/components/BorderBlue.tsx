@@ -42,6 +42,9 @@ export const BorderBlue = ({
           border-legislative-blue-4 
           border-[12px] 
           overflow-hidden 
+          border-blue-200
+
+       
           ${className} 
           ${variantsClassName}
         `}
@@ -58,7 +61,9 @@ export const BorderBlue = ({
               rounded-[20px] 
               border-solid 
               border-legislative-blue-3 
-              border-[24px]
+              border-[10px]
+              border-blue-300
+              
             "
           />
         </div>
