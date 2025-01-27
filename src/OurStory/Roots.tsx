@@ -17,19 +17,19 @@ const HeroSection = () => {
         <div className="flex flex-col items-start self-stretch justify-between px-4 mt-8 space-y-6 md:flex-row md:mt-12 md:space-y-0 md:space-x-4 md:px-8">
           <CardInfoGraphicTypeIcon
             header="Company Volunteering"
-            subheader="August 1st-30th"
+            // subheader="August 1st-30th"
             description="We carefully review all applications considering passion for collaboration, sustainability, and curiosity. We prioritize those with non-traditional backgrounds in tech. A portfolio is helpful, even if it's a single-page app."
             className="w-full md:flex-1"
           />
           <CardInfoGraphicTypeIcon
             header="Fellowship Program"
-            subheader="September 2nd"
+            // subheader="September 2nd"
             description="Selected fellows will be confirmed through their coding repository, calendar, and Slack invitation. We provide tooling like Codespaces, AI for code, and Postman for APIs, which will be reviewed during the program orientation."
             className="w-full md:flex-1"
           />
           <CardInfoGraphicTypeIcon
             header="Nature Conservation"
-            subheader="September 17 to December 9"
+            // subheader="September 17 to December 9"
             description="The 12-week fellowship requires a weekly commitment of 3 to 5 hours. Mentors are available via scheduled Zoom hours and asynchronously through GitHub and Slack. Fellows earn credentialed badges upon completion."
             className="w-full md:flex-1"
           />
