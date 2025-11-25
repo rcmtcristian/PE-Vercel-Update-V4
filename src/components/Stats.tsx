@@ -1,5 +1,6 @@
 export interface IMetricsNumberProps {
   className?: string;
+  icon?: React.ReactNode;
   number?: number | string;
   label?: string;
   numberClassName?: string;
@@ -8,6 +9,7 @@ export interface IMetricsNumberProps {
 
 export const MetricsNumber = ({
   className = "",
+  icon,
   number = "40",
   label = "Countries participating",
   numberClassName = "",
@@ -16,23 +18,25 @@ export const MetricsNumber = ({
 }: IMetricsNumberProps): JSX.Element => {
   return (
     <div
-      className={`flex flex-col gap-2 items-start justify-start w-full max-w-[200px] ${className}`}
+      className={`flex flex-col gap-2 items-center justify-start text-center ${className}`}
     >
+      {icon && (
+        <div className="w-16 h-16 md:w-20 md:h-20 mb-2 text-[#E8A64D]">
+          {icon}
+        </div>
+      )}
+
       <div
-        className={`text-color-palette-primary-black text-left font-subtitle-font-family text-subtitle-font-size font-subtitle-font-weight w-full ${numberClassName}`}
+        className={`text-3xl md:text-4xl font-bold text-[#3D5A4F] ${numberClassName}`}
       >
         {number}
       </div>
 
-      <div className="bg-legislative-blue rounded-[50px] shrink-0 w-6 h-0.5 my-2"></div>
-
       <div
-        className={`text-color-palette-primary-black text-left font-body-font-family text-body-font-size font-body-font-weight w-full ${labelClassName}`}
+        className={`text-sm md:text-base text-[#2C4A3E] mt-2 ${labelClassName}`}
       >
         {label}
       </div>
     </div>
   );
 };
-
-export default MetricsNumber;

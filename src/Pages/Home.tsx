@@ -1,10 +1,10 @@
 import { HomeFooter } from "../Home/HomeFooter";
 import ResponsiveHeroSection from "../Home/HomeHero/ResponsiveHeroSection";
 import HomeInfoSection from "../Home/Info/HomeInfoSection";
-import HomeImpactSection from "../Home/Impact/HomeInpactSection";
 import HomeLogosSection from "../Home/Logos/HomeLogosSection";
 import Stats from "../Home/HomeStats";
 import HomeCtaSection from "../Home/HomeCta/HomeCtaSection";
+import HomeImpactSectionSticky from "@/Home/Impact/HomeImpactSectionSticky";
 
 export interface HomeProps {
   className?: string;
@@ -20,10 +20,11 @@ export const Home = ({ className, ...props }: HomeProps): JSX.Element => {
     >
       <ResponsiveHeroSection></ResponsiveHeroSection>
       <HomeInfoSection></HomeInfoSection>
-      <HomeImpactSection></HomeImpactSection>
       <HomeLogosSection></HomeLogosSection>
-
       <Stats></Stats>
+
+      {/* <HomeImpactSection></HomeImpactSection> */}
+      <HomeImpactSectionSticky></HomeImpactSectionSticky>
 
       <HomeCtaSection></HomeCtaSection>
 
