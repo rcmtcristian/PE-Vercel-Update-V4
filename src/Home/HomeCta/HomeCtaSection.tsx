@@ -2,11 +2,6 @@
 
 import { MainButton } from "../../components/MainButton";
 
-// import { MainButton } from "../../components/MainButton";
-
-
-
-
 const HomeCtaSection = () => {
   return (
     <div className="relative w-full h-[475px] md:h-[500px] lg:h-[550px] overflow-hidden">
@@ -18,9 +13,7 @@ const HomeCtaSection = () => {
       />
 
       {/* Gradient Overlay */}
-      <div 
-        className="absolute inset-0 bg-gradient-to-t from-gray-800/50 to-transparent"
-      />
+      <div className="absolute inset-0 bg-gradient-to-t from-gray-800/50 to-transparent" />
 
       {/* Content Container */}
       <div className="relative z-10 flex flex-col items-center justify-center h-full px-4 text-center">
@@ -28,12 +21,9 @@ const HomeCtaSection = () => {
           <h2 className="mb-8 text-2xl text-color-palette-primary-white font-title-font-family md:text-3xl lg:text-4xl font-title-font-weight">
             Let's Build the Future Together
           </h2>
-          
+
           <div className="flex justify-center">
-            <MainButton
-              label="Get Involved"
-              className="w-full max-w-xs"
-            />
+            <MainButton />
           </div>
         </div>
       </div>

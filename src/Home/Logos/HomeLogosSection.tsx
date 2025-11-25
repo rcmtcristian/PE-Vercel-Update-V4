@@ -1,15 +1,15 @@
 const HomeLogosSection = () => {
   const logos = [
-    "logo-image0.png",
-    "logo-image1.png",
-    "logo-image2.png",
-    "logo-image3.png",
-    "logo-image4.png",
-    "logo-image5.png",
-    "logo-image6.png",
-    "logo-image7.png",
-    "logo-image8.png",
-    "logo-image9.png",
+    "logo-aws.png",
+    "logo-bowie.png",
+    "logo-github.png",
+    "logo-google.png",
+    "logo-ibm.svg",
+    "logo-mlh.png",
+    "logo-planetscale.png",
+    "logo-postman.svg",
+    "logo-redhat.png",
+    "logo-sabio.png",
   ];
 
   return (

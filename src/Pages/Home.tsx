@@ -5,6 +5,8 @@ import HomeLogosSection from "../Home/Logos/HomeLogosSection";
 import Stats from "../Home/HomeStats";
 import HomeCtaSection from "../Home/HomeCta/HomeCtaSection";
 import HomeImpactSectionSticky from "@/Home/Impact/HomeImpactSectionSticky";
+import EnvironmentalToolsSection from "@/Home/EnvironmentalToolsSection";
+import NewsletterSection from "@/Home/HomeCta/NewsletterSection";
 
 export interface HomeProps {
   className?: string;
@@ -25,8 +27,10 @@ export const Home = ({ className, ...props }: HomeProps): JSX.Element => {
 
       {/* <HomeImpactSection></HomeImpactSection> */}
       <HomeImpactSectionSticky></HomeImpactSectionSticky>
+      <EnvironmentalToolsSection></EnvironmentalToolsSection>
 
-      <HomeCtaSection></HomeCtaSection>
+      {/* <HomeCtaSection></HomeCtaSection> */}
+      <NewsletterSection></NewsletterSection>
 
       <HomeFooter />
     </div>

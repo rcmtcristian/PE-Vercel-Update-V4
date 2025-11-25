@@ -55,7 +55,7 @@ const HomeImpactSectionSticky = () => {
         "1 hackathon = $600-$2,000 donation credits with your giving platform",
       description:
         "Our hack events-in-a-box easily integrates with your Volunteerism and Sustainability Programs. We have already supported organizations with raising more than $160,000 through hackathons.",
-      image: "companies-image.jpg",
+      image: "companies-image.png",
       extraContent: (
         <div className="grid grid-cols-2 gap-4 mt-6">
           <img
@@ -69,7 +69,7 @@ const HomeImpactSectionSticky = () => {
             className="object-contain h-8"
           />
           <img
-            src="brightfunds-logo.png"
+            src="brightfunds-logo.svg"
             alt="BrightFunds"
             className="object-contain h-8"
           />
@@ -89,7 +89,7 @@ const HomeImpactSectionSticky = () => {
         "Our goal is to reforest 30 million acres of land by 2030 in the United States, India, and Brazil",
       description:
         "Most conservation projects take 5-7 years to start seeing success. Our hacks can change this. We translate technological needs from current conservation projects into meaningful open-source data and AI tools that accelerate reforestation and land restoration. Through our hackathons, we support our environmental partners' efforts to protect forests, waterways, and biodiversity.",
-      image: "environmental-partners-image.jpg",
+      image: "environmental-partners-image.png",
     },
   ];
 
