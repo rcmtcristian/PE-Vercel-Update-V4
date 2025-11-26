@@ -72,7 +72,10 @@ export const NavBarModeDesktop = ({
                       Support open source software by sponsoring one of our
                       events
                     </ListItem>
-                    <ListItem href="/donate" title="Donate to Us">
+                    <ListItem
+                      href="https://codefortheplanet.donorsupport.co/page/generalgiving"
+                      title="Donate to Us"
+                    >
                       We appreciate any and all contributions!
                     </ListItem>
                     <ListItem href="/ContactUs" title="Contact Us">
@@ -134,7 +137,7 @@ export const NavBarModeDesktop = ({
                 ERG Volunteering
               </a>
               <a
-                href="/donate"
+                href="https://codefortheplanet.donorsupport.co/page/generalgiving"
                 className="block p-2 rounded-md hover:bg-accent"
               >
                 Donate to Us
