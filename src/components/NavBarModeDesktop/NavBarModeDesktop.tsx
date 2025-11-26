@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
+
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -54,9 +56,9 @@ export const NavBarModeDesktop = ({
                   <ul className="grid gap-3 p-4 w-[300px] md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
                     <li className="row-span-3">
                       <NavigationMenuLink asChild>
-                        <a
+                        <Link
                           className="flex flex-col justify-end h-full p-6 no-underline rounded-md outline-none select-none bg-gradient-to-b from-muted/50 to-muted focus:shadow-md"
-                          href="/volunteer"
+                          to="/volunteer"
                         >
                           <div className="mt-4 mb-2 text-lg font-medium">
                             Volunteer with us
@@ -65,43 +67,47 @@ export const NavBarModeDesktop = ({
                             Become a part of our community and lets help each
                             other out grow!
                           </p>
-                        </a>
+                        </Link>
                       </NavigationMenuLink>
                     </li>
-                    <ListItem href="/ErgVolunteering" title="ERG Volunteering">
+                    <ListItem to="/ErgVolunteering" title="ERG Volunteering">
                       Support open source software by sponsoring one of our
                       events
                     </ListItem>
                     <ListItem
                       href="https://codefortheplanet.donorsupport.co/page/generalgiving"
                       title="Donate to Us"
+                      external
                     >
                       We appreciate any and all contributions!
                     </ListItem>
-                    <ListItem href="/ContactUs" title="Contact Us">
+                    <ListItem to="/ContactUs" title="Contact Us">
                       We are always looking for new ways to help our community.
                     </ListItem>
                   </ul>
                 </NavigationMenuContent>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <NavigationMenuLink
-                  href="/fellowship"
-                  className={navigationMenuTriggerStyle()}
-                >
-                  Fellowship
+                <NavigationMenuLink asChild>
+                  <Link
+                    to="/fellowship"
+                    className={navigationMenuTriggerStyle()}
+                  >
+                    Fellowship
+                  </Link>
                 </NavigationMenuLink>
-                <NavigationMenuLink
-                  href="/conservation"
-                  className={navigationMenuTriggerStyle()}
-                >
-                  Conversation
+                <NavigationMenuLink asChild>
+                  <Link
+                    to="/conservation"
+                    className={navigationMenuTriggerStyle()}
+                  >
+                    Conversation
+                  </Link>
                 </NavigationMenuLink>
-                <NavigationMenuLink
-                  href="/Ourstory"
-                  className={navigationMenuTriggerStyle()}
-                >
-                  About
+                <NavigationMenuLink asChild>
+                  <Link to="/Ourstory" className={navigationMenuTriggerStyle()}>
+                    About
+                  </Link>
                 </NavigationMenuLink>
               </NavigationMenuItem>
             </NavigationMenuList>
@@ -124,51 +130,53 @@ export const NavBarModeDesktop = ({
           <div className="flex flex-col p-4 pt-20 space-y-4">
             <div className="space-y-4">
               <h3 className="mb-2 text-lg font-medium">Get Involved</h3>
-              <a
-                href="/volunteer"
+              <Link
+                to="/volunteer"
                 className="block p-2 rounded-md hover:bg-accent"
               >
                 Volunteer with us
-              </a>
-              <a
-                href="/ErgVolunteering"
+              </Link>
+              <Link
+                to="/ErgVolunteering"
                 className="block p-2 rounded-md hover:bg-accent"
               >
                 ERG Volunteering
-              </a>
+              </Link>
               <a
                 href="https://codefortheplanet.donorsupport.co/page/generalgiving"
                 className="block p-2 rounded-md hover:bg-accent"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 Donate to Us
               </a>
-              <a
-                href="/ContactUs"
+              <Link
+                to="/ContactUs"
                 className="block p-2 rounded-md hover:bg-accent"
               >
                 Contact Us
-              </a>
+              </Link>
             </div>
 
             <div className="pt-4 space-y-4 border-t">
-              <a
-                href="/fellowship"
+              <Link
+                to="/fellowship"
                 className="block p-2 rounded-md hover:bg-accent"
               >
                 Fellowship
-              </a>
-              <a
-                href="/conservation"
+              </Link>
+              <Link
+                to="/conservation"
                 className="block p-2 rounded-md hover:bg-accent"
               >
                 Conversation
-              </a>
-              <a
-                href="/Ourstory"
+              </Link>
+              <Link
+                to="/Ourstory"
                 className="block p-2 rounded-md hover:bg-accent"
               >
                 About
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -179,24 +187,47 @@ export const NavBarModeDesktop = ({
 
 const ListItem = React.forwardRef<
   React.ElementRef<"a">,
-  React.ComponentPropsWithoutRef<"a">
->(({ className, title, children, ...props }, ref) => {
+  React.ComponentPropsWithoutRef<"a"> & { external?: boolean; to?: string }
+>(({ className, title, children, href, to, external, ...props }, ref) => {
+  const content = (
+    <>
+      <div className="text-sm font-medium leading-none">{title}</div>
+      <p className="text-sm leading-snug line-clamp-2 text-muted-foreground">
+        {children}
+      </p>
+    </>
+  );
+
   return (
     <li>
       <NavigationMenuLink asChild>
-        <a
-          ref={ref}
-          className={cn(
-            "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
-            className
-          )}
-          {...props}
-        >
-          <div className="text-sm font-medium leading-none">{title}</div>
-          <p className="text-sm leading-snug line-clamp-2 text-muted-foreground">
-            {children}
-          </p>
-        </a>
+        {external ? (
+          <a
+            ref={ref}
+            href={href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={cn(
+              "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
+              className
+            )}
+            {...props}
+          >
+            {content}
+          </a>
+        ) : (
+          <Link
+            ref={ref}
+            to={to || "/"}
+            className={cn(
+              "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
+              className
+            )}
+            {...props}
+          >
+            {content}
+          </Link>
+        )}
       </NavigationMenuLink>
     </li>
   );
