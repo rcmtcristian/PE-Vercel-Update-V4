@@ -11,8 +11,11 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import { Menu, X } from "lucide-react";
-import { cn } from "@/lib/utils";
 import { ProgramEquityLogo } from "@/ProgramEquityLogoSizeMedium/ProgramEquityLogo";
+
+// Local lightweight className utility to avoid missing module error.
+// Keeps behavior similar to typical `cn` helpers (filters falsy values and joins).
+const cn = (...classes: any[]) => classes.filter(Boolean).join(" ");
 
 export interface INavBarModeDesktopProps {
   mode?: "desktop" | "mobile";
