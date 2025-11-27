@@ -7,7 +7,8 @@ import HomeImpactSectionStickylenis from "@/Home/Impact/HomeImpactSectionStickyM
 import EnvironmentalToolsSection from "@/Home/EnvironmentalToolsSection";
 import NewsletterSection from "@/Home/HomeCta/NewsletterSection";
 import SmoothScrolling from "@/SmoothScrolling";
-import HomeImpactSectionSticky from "@/Home/Impact/HomeImpactSectionSticky";
+// import HomeImpactSectionSticky from "@/Home/Impact/HomeImpactSectionSticky";
+import MotionTest from "@/Home/Impact/MotionTest";
 // import HomeImpactSectionStickyWhole from "@/Home/Impact/HomeImpactSectionStickyWhole";
 
 export interface HomeProps {
@@ -19,7 +20,7 @@ export const Home = ({ className, ...props }: HomeProps): JSX.Element => {
     <SmoothScrolling>
       <div
         className={
-          "bg-color-palette-primary-white flex flex-col gap-0 items-center justify-start relative overflow-hidden " +
+          "bg-color-palette-primary-white flex flex-col gap-0 items-center justify-start relative overflow-clip  " +
           className
         }
       >
@@ -39,7 +40,8 @@ export const Home = ({ className, ...props }: HomeProps): JSX.Element => {
         {/* <HomeCtaSection></HomeCtaSection> */}
         <NewsletterSection></NewsletterSection>
 
-        <HomeFooter />
+        {/* <HomeFooter />
+        <MotionTest></MotionTest> */}
       </div>
     </SmoothScrolling>
   );
