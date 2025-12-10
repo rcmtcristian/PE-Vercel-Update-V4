@@ -394,15 +394,15 @@ const HomeImpactSectionStickyMotion = () => {
               </div>
 
               {/* Scroll hint */}
-              {isScrollLocked && activeIndex < sections.length - 1 && (
+              {/* {isScrollLocked && activeIndex < sections.length - 1 && (
                 <motion.div
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   className="text-center mt-4 text-[#3D5A4F] text-sm"
                 >
                   Scroll to see more ({activeIndex + 1}/{sections.length})
-                </motion.div>
-              )}
+                </motion.div> */}
+              {/* )} */}
             </motion.div>
           </div>
         </div>
