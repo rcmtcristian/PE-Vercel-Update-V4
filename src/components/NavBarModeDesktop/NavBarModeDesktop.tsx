@@ -11,8 +11,11 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import { Menu, X } from "lucide-react";
-import { cn } from "@/lib/utils";
 import { ProgramEquityLogo } from "@/ProgramEquityLogoSizeMedium/ProgramEquityLogo";
+
+// Local lightweight className utility to avoid missing module error.
+// Keeps behavior similar to typical `cn` helpers (filters falsy values and joins).
+const cn = (...classes: any[]) => classes.filter(Boolean).join(" ");
 
 export interface INavBarModeDesktopProps {
   mode?: "desktop" | "mobile";
@@ -36,11 +39,13 @@ export const NavBarModeDesktop = ({
       <div
         className={cn(
           "bg-header-and-footer-nav-bar-background-fill",
+          "backdrop-blur-sm",
           "px-4 sm:px-6 lg:px-8",
           "flex flex-row items-center justify-between",
           "min-h-[72px] w-full",
-          "relative",
-          "z-50",
+          "sticky top-0 left-0",
+          "z-[500]",
+          "shadow-md",
           className
         )}
       >
@@ -53,7 +58,10 @@ export const NavBarModeDesktop = ({
               <NavigationMenuItem>
                 <NavigationMenuTrigger>Get Involved</NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <ul className="grid gap-3 p-4 w-[300px] md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
+                  <ul
+                    className="grid gap-3 p-4 w-[300px] md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]
+                   bg-header-and-footer-nav-bar-background-fill"
+                  >
                     <li className="row-span-3">
                       <NavigationMenuLink asChild>
                         <Link

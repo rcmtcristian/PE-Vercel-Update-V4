@@ -1,4 +1,6 @@
-import React, { useState, useEffect } from "react";
+"use client";
+import { useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { MainButton } from "../../components/MainButton";
 
 // const AnimatedText: React.FC<{ startFrame: string; className?: string }> = ({
@@ -33,19 +35,31 @@ import { MainButton } from "../../components/MainButton";
 //     </div>
 //   );
 // };
-
 const ResponsiveHeroSection = () => {
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start start", "end start"],
+  });
+
+  const y = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
+
   return (
-    <div className="relative w-full h-[60vh] md:h-[850px] overflow-hidden">
-      {/* Background Image */}
+    <div
+      ref={ref}
+      className="relative w-full h-[60vh] md:h-[850px] overflow-hidden"
+    >
+      {/* Background Image - Lower z-index */}
       <div className="absolute inset-0 z-0">
-        <img
-          className="object-cover w-full h-full"
+        <motion.img
+          style={{ y }}
+          className="object-cover w-full h-[120%]"
           src="img-7849-10.png"
           alt="Hero Background"
         />
+        {/* Add pointer-events-none to gradient overlay */}
         <div
-          className="absolute inset-0"
+          className="absolute inset-0 pointer-events-none"
           style={{
             background:
               "linear-gradient(0deg, rgba(252, 255, 255, 0.00) 0%, rgba(86, 105, 109, 0.50) 100%)",
@@ -53,19 +67,14 @@ const ResponsiveHeroSection = () => {
         />
       </div>
 
-      {/* Content Container */}
-      <div className="container relative flex flex-col items-center justify-center h-full px-4 mx-auto space-y-6 text-center md:space-y-8">
+      {/* Content Container - Higher z-index */}
+      <div className="container relative flex flex-col items-center justify-center h-full px-4 mx-auto space-y-6 text-center z-100 md:space-y-8">
         <h1 className="max-w-3xl -mt-8 text-3xl font-bold text-pe-gold-2 md:text-6xl title-font-family">
           Code for the Planet
         </h1>
-
-        {/* <div className="w-full max-w-lg">
-          <AnimatedText startFrame="1" className="w-full" />
-        </div> */}
         <h1 className="max-w-3xl -mt-8 text-3xl font-bold text-white">
-          We’re creating a community of technologists who build for the planet
+          We're creating a community of technologists who build for the planet
         </h1>
-
         <MainButton />
       </div>
     </div>
