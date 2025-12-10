@@ -237,7 +237,7 @@ const HomeImpactSectionStickyWhole = () => {
               </div>
 
               {/* Progress indicator */}
-              <div className="flex justify-center gap-2 mt-6">
+              {/* <div className="flex justify-center gap-2 mt-6">
                 {sections.map((_, index) => (
                   <div
                     key={index}
@@ -248,14 +248,14 @@ const HomeImpactSectionStickyWhole = () => {
                     }`}
                   />
                 ))}
-              </div>
+              </div> */}
 
               {/* Scroll lock indicator */}
-              {isScrollLocked && (
+              {/* {isScrollLocked && (
                 <div className="text-center mt-4 text-sm text-[#3D5A4F]">
                   Scroll through all cards to continue
                 </div>
-              )}
+              )} */}
             </div>
           </div>
         </div>
