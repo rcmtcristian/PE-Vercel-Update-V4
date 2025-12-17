@@ -9,6 +9,7 @@ import NewsletterSection from "@/Home/HomeCta/NewsletterSection";
 import SmoothScrolling from "@/SmoothScrolling";
 // import HomeImpactSectionSticky from "@/Home/Impact/HomeImpactSectionSticky";
 import MotionTest from "@/Home/Impact/MotionTest";
+import HomeImpactSectionStackingCard from "@/Home/Impact/HomeImpactSectionStackingCard";
 // import HomeImpactSectionStickyWhole from "@/Home/Impact/HomeImpactSectionStickyWhole";
 
 export interface HomeProps {
@@ -30,14 +31,10 @@ export const Home = ({ className, ...props }: HomeProps): JSX.Element => {
         <HomeLogosSection></HomeLogosSection>
         <Stats></Stats>
 
-        {/* <HomeImpactSection></HomeImpactSection> */}
-        {/* <HomeImpactSectionSticky></HomeImpactSectionSticky> */}
-        <HomeImpactSectionStickylenis></HomeImpactSectionStickylenis>
+        <HomeImpactSectionStackingCard></HomeImpactSectionStackingCard>
 
-        {/* <HomeImpactSectionStickyWhole></HomeImpactSectionStickyWhole> */}
         <EnvironmentalToolsSection></EnvironmentalToolsSection>
 
-        {/* <HomeCtaSection></HomeCtaSection> */}
         <NewsletterSection></NewsletterSection>
 
         {/* <HomeFooter />
