@@ -1,8 +1,12 @@
 import React, { useState } from "react";
 import { MainButton } from "../../components/MainButton";
 
+type NewsletterChoice = "hackathons" | "sponsor_env" | "company_volunteering";
+
 const NewsletterSection = () => {
-  const [selectedInterest, setSelectedInterest] = useState<string>("");
+  const [selectedInterest, setSelectedInterest] = useState<
+    NewsletterChoice | ""
+  >("");
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<{
@@ -10,25 +14,11 @@ const NewsletterSection = () => {
     message: string;
   }>({ type: null, message: "" });
 
-  //  Portal ID and Form GUID
-  const HUBSPOT_PORTAL_ID = "YOUR_PORTAL_ID";
-  const HUBSPOT_FORM_GUID = "YOUR_FORM_GUID";
-
-  const interests = [
-    "Attending hackathons",
-    "Sponsoring environmental projects",
-    "Company Volunteering",
+  const interests: { label: string; value: NewsletterChoice }[] = [
+    { label: "Attending hackathons", value: "hackathons" },
+    { label: "Sponsoring environmental projects", value: "sponsor_env" },
+    { label: "Company Volunteering", value: "company_volunteering" },
   ];
-
-  // Get HubSpot tracking cookie for visitor tracking
-  const getCookie = (name: string): string | null => {
-    const value = "; " + document.cookie;
-    const parts = value.split("; " + name + "=");
-    if (parts.length === 2) {
-      return parts.pop()?.split(";").shift() || null;
-    }
-    return null;
-  };
 
   const handleSubmit = async () => {
     if (!email || !selectedInterest) {
@@ -43,63 +33,24 @@ const NewsletterSection = () => {
     setSubmitStatus({ type: null, message: "" });
 
     try {
-      // Prepare HubSpot submission data
-      const submissionData = {
-        submittedAt: Date.now(),
-        fields: [
-          {
-            name: "email",
-            value: email,
-          },
-          {
-            name: "newsletter_interest", // Single select custom property
-            value: selectedInterest,
-          },
-        ],
-        context: {
-          hutk: getCookie("hubspotutk"), // HubSpot tracking cookie
-          pageUri: window.location.href,
-          pageName: document.title,
-        },
-        legalConsentOptions: {
-          consent: {
-            consentToProcess: true,
-            text: "I agree to receive communications from Climate Joy",
-            communications: [
-              {
-                value: true,
-                subscriptionTypeId: 999, // Replace with your subscription type ID
-                text: "I agree to receive marketing emails",
-              },
-            ],
-          },
-        },
-      };
-
-      // Submit to HubSpot Forms API
-      const response = await fetch(
-        `https://api.hsforms.com/submissions/v3/integration/submit/${HUBSPOT_PORTAL_ID}/${HUBSPOT_FORM_GUID}`,
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(submissionData),
-        }
-      );
+      const response = await fetch("/api/newsletter-signup", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          email,
+          choice: selectedInterest,
+        }),
+      });
 
       if (!response.ok) {
         throw new Error("Form submission failed");
       }
 
-      const result = await response.json();
-
       setSubmitStatus({
         type: "success",
-        message: result.inlineMessage || "Thank you for subscribing!",
+        message: "Thank you for subscribing!",
       });
 
-      // Reset form
       setEmail("");
       setSelectedInterest("");
     } catch (error) {
@@ -121,7 +72,6 @@ const NewsletterSection = () => {
         </h2>
 
         <div className="space-y-6">
-          {/* Radio Options */}
           <div>
             <p className="text-base md:text-lg text-[#2C4A3E] font-medium mb-4">
               What type of updates are you interested in?
@@ -129,31 +79,32 @@ const NewsletterSection = () => {
             <div className="space-y-3">
               {interests.map((interest) => (
                 <label
-                  key={interest}
+                  key={interest.value}
                   className="flex items-center gap-3 cursor-pointer group"
                 >
                   <div className="relative">
                     <input
                       type="radio"
                       name="interest"
-                      value={interest}
-                      checked={selectedInterest === interest}
-                      onChange={(e) => setSelectedInterest(e.target.value)}
+                      value={interest.value}
+                      checked={selectedInterest === interest.value}
+                      onChange={(e) =>
+                        setSelectedInterest(e.target.value as NewsletterChoice)
+                      }
                       className="appearance-none w-5 h-5 border-2 border-[#3D5A4F] rounded-full cursor-pointer checked:border-[#3D5A4F] focus:ring-2 focus:ring-[#3D5A4F]/30"
                     />
-                    {selectedInterest === interest && (
+                    {selectedInterest === interest.value && (
                       <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-3 h-3 bg-[#3D5A4F] rounded-full"></div>
                     )}
                   </div>
                   <span className="text-sm md:text-base text-[#2C4A3E] group-hover:text-[#3D5A4F]">
-                    {interest}
+                    {interest.label}
                   </span>
                 </label>
               ))}
             </div>
           </div>
 
-          {/* Email Input and Button */}
           <div className="flex flex-col items-center gap-4 sm:flex-row">
             <input
               type="email"
@@ -173,7 +124,6 @@ const NewsletterSection = () => {
             </div>
           </div>
 
-          {/* Status Messages */}
           {submitStatus.type && (
             <div
               className={`p-4 rounded-md text-center ${
