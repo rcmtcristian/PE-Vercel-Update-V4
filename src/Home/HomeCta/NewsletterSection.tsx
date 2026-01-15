@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { MainButton } from "../../components/MainButton";
 
 type NewsletterChoice = "hackathons" | "sponsor_env" | "company_volunteering";
