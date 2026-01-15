@@ -41,7 +41,7 @@ export const OurStory = ({
           {/* Organization Overview */}
           <div className="flex flex-col items-start self-stretch gap-8 py-8 md:py-16">
             <p className="text-[#000000] text-left font-body-font-family text-body-font-size font-body-font-weight">
-              Program Earth is a 501(c)(3) nonprofit that champions the next
+              ProgramEarth is a 501(c)(3) nonprofit that champions the next
               generation of developers to build talent, foster networks, and
               expand industry commitment to holistic climate solutions. We
               innovate environmental stewardship and corporate sustainability
