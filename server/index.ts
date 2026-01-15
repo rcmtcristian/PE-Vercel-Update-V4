@@ -18,9 +18,9 @@ const LIST_IDS: Record<NewsletterChoice, string> = {
 };
 
 const COHORT_LABELS: Record<NewsletterChoice, string> = {
-  hackathons: "OSS Mentorship", // was "AOSS mentorship" - use "Hackathon" if that fits better
-  sponsor_env: "ERG Leaders", // was "ERG leaders" - capital L
-  company_volunteering: "Advisors", // was "advisors" - capital A
+  hackathons: "OSS Mentorship",
+  sponsor_env: "ERG Leaders",
+  company_volunteering: "Advisors",
 };
 
 async function hubspotRequest(path: string, init: RequestInit) {
