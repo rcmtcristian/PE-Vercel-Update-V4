@@ -33,10 +33,7 @@ export const OurStory = ({
           <SectionHeader
             title="Our Mission"
             borderColor="bg-legislative-blue"
-            className={cn(
-              " left-[-7.9vw] right-[-100vw]"
-              // "h-[1px] sm:h-[1.5px] md:h-[2px] lg:h-[2.5px] xl:h-[3px]",
-            )}
+            className={cn(" left-[-7.9vw] right-[-100vw]")}
           />
           {/* Organization Overview */}
           <div className="flex flex-col items-start self-stretch gap-8 py-8 md:py-16">
@@ -50,6 +47,30 @@ export const OurStory = ({
               locally while having global impact.
             </p>
             <OurStoryStats />
+          </div>
+
+          {/* Map Embed */}
+          <SectionHeader
+            title="Our Map"
+            borderColor="bg-legislative-blue"
+            className={cn(" left-[-7.9vw] right-[-100vw]")}
+          />
+          <div className="w-full py-8 md:py-16">
+            <iframe
+              src="https://map.programearth.org"
+              title="ProgramEarth Map"
+              className="w-full h-[500px] md:h-[700px] rounded-lg border-0"
+              loading="lazy"
+              allowFullScreen
+            />
+            <a
+              href="https://map.programearth.org"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-4 inline-block text-legislative-blue underline underline-offset-2 text-sm"
+            >
+              View full map →
+            </a>
           </div>
         </div>
 
